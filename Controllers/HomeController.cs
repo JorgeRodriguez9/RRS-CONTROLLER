@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RRS_Controller.Models;
 using System.Diagnostics;
+using RRS_Controller.Models;
 
 namespace RRS_Controller.Controllers
 {
@@ -26,6 +26,7 @@ namespace RRS_Controller.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
