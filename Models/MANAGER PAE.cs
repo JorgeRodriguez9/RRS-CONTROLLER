@@ -27,6 +27,8 @@ namespace RRS_Controller.Models
 
         public virtual USER? USER { get; set; }
 
+        public virtual ICollection<INSTITUTION> INSTITUTIONS { get; set; }
+
 
     }
 }
