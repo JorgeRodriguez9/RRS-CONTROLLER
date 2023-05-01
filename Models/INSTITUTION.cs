@@ -19,10 +19,15 @@ namespace RRS_Controller.Models
         [StringLength(50)]
         public string Email { get; set; }
 
-        [ForeignKey("MANAGER_PAE")]
-        public string Id_Manager { get; set; }
+        public int Id_Manager { get; set; }
 
-        public virtual MANAGER_PAE? MANAGER_PAE { get; set; }
+        [ForeignKey("Id_Manager")]
+        public virtual MANAGER_PAE MANAGER_PAE { get; set; }
+
+        /////////////////////////////////
+
+        public virtual ICollection<SECRETARY_INTS> SECRETARY_INTSs { get; set; }
+        public virtual ICollection<NUTRITIONITS_INTS> NUTRITIONITS_INTSs { get; set; }
 
     }
 }

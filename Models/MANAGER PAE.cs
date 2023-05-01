@@ -22,11 +22,12 @@ namespace RRS_Controller.Models
         [StringLength(50)]
         public string Email { get; set; }
 
-        [ForeignKey("USER")]
-        public string Id_User { get; set; }
+        
+        public int Id_User { get; set; }
+        [ForeignKey("Id_User")]
+        public virtual USER USER { get; set; }
 
-        public virtual USER? USER { get; set; }
-
+        //////////////
         public virtual ICollection<INSTITUTION> INSTITUTIONS { get; set; }
 
 
