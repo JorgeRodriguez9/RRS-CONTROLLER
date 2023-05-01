@@ -2,17 +2,17 @@
 
 namespace RRS_Controller.Models
 {
-    public class CATEGORY
+    public class SUPPLIER
     {
 
         [Key]
         public int ID { get; set; }
 
+        [StringLength(30)]
         public string Name { get; set; }
 
-        ///////////////////////////
-        
-        public virtual ICollection<MENU> MENUS { get; set; }
+        /////////////////
+        public virtual ICollection<PRODUCT> PRODUCTS { get; set; }
 
     }
 }
