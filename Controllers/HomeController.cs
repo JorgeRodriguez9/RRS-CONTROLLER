@@ -23,6 +23,16 @@ namespace RRS_Controller.Controllers
             return View();
         }
 
+        public IActionResult HomeNutritionistPAE()
+        {
+            return View();
+        }
+
+        public IActionResult CreateMenus()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

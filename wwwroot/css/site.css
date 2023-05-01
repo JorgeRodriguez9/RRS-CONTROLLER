@@ -20,3 +20,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.top_separationbutton1 {
+    margin-top: 50px;
+}
+
+.top_separationbutton {
+    margin-top: 90px;
+}
+
+.top_Title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ml-2 {
+  margin-left: 0.1rem !important;
+}
+
+.btn-light {
+    border: 1px solid black;
+}
