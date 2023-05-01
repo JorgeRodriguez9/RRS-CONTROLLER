@@ -9,8 +9,12 @@ namespace RRS_Controller.Models
         [Key]
         public int ID { get; set; }
 
-        [StringLength(20)]
+        [StringLength(30)]
         public string Name_Role { get; set; }
-        
+
+        /////////////////
+        public virtual ICollection<USER> USERS { get; set; }
+
+
     }
 }

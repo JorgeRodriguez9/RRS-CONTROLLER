@@ -12,20 +12,23 @@ namespace RRS_Controller.Models
         public int Document { get; set; }
 
         [StringLength(20)]
-        public string? Name { get; set; }
+        public string Name { get; set; }
         [StringLength(20)]
-        public string? Last_Name { get; set; }
+        public string Last_Name { get; set; }
 
         [StringLength(30)]
-        public string? Adress { get; set; }
+        public string Adress { get; set; }
 
         [StringLength(50)]
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
-        [ForeignKey("USER")]
-        public string? Id_User { get; set; }
+        public int Id_User { get; set; }
+        [ForeignKey("Id_User")]
+        public virtual USER USER { get; set; }
 
-        public virtual USER? USER { get; set; }
+        //////////////////////////////////
+        public virtual ICollection<MENU> MENUS { get; set; }
+        public virtual ICollection<FOOD> FOODS { get; set; }
 
     }
 }
