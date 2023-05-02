@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RRS_Controller.DAL;
 
+
 namespace RRS_Controller
 {
     public class Program
@@ -11,6 +12,7 @@ namespace RRS_Controller
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
             builder.Services.AddDbContext<RSSCONTROLLERContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));
 

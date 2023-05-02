@@ -28,6 +28,7 @@ namespace RRS_Controller.Models
         public virtual USER USER { get; set; }
 
         public int Id_Institution { get; set; }
+
         [ForeignKey("Id_Institution")]
         public virtual INSTITUTION INSTITUTION { get; set; }
 

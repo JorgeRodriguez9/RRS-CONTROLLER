@@ -41,3 +41,13 @@ body {
 .btn-light {
     border: 1px solid black;
 }
+
+.btn-text {
+    position: absolute;
+    top: -25px; /* ajusta la posici�n vertical */
+    left: 50%; /* centra el texto horizontalmente */
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #000;
+}
+
