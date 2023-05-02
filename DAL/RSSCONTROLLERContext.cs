@@ -10,6 +10,88 @@ namespace RRS_Controller.DAL
 
         public RSSCONTROLLERContext(DbContextOptions<RSSCONTROLLERContext> options) : base(options) { }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<NUTRITIONITS_INTS>()
+             .HasOne(n => n.INSTITUTION)
+             .WithMany(i => i.NUTRITIONITS_INTSs)
+             .HasForeignKey(n => n.Id_Institution)
+             .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<NUTRITIONITS_INTS>()
+           .HasOne(n => n.USER)
+           .WithMany()
+           .HasForeignKey(n => n.Id_User)
+           .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<SHIPMENT>()
+            .HasOne(s => s.REQUEST)
+            .WithMany()
+            .HasForeignKey(s => s.Id_Request)
+            .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<SECRETARY_INTS>()
+           .HasOne(n => n.USER)
+           .WithMany()
+           .HasForeignKey(n => n.Id_User)
+           .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<USER>()
+            .HasOne(u => u.SECRETARY_INTS)
+            .WithOne(s => s.USER)
+            .HasForeignKey<SECRETARY_INTS>(s => s.Id_User)
+            .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<ADMIN_PAE>()
+           .HasOne(u => u.USER)
+           .WithOne(s => s.ADMIN_PAE)
+           .HasForeignKey<ADMIN_PAE>(s => s.Id_User)
+           .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<USER>()
+           .HasOne(u => u.NUTRITIONITS_INTS)
+           .WithOne(s => s.USER)
+           .HasForeignKey<NUTRITIONITS_INTS>(s => s.Id_User)
+           .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<SECRETARY_INTS>()
+            .HasOne(n => n.INSTITUTION)
+            .WithMany(i => i.SECRETARY_INTSs)
+            .HasForeignKey(n => n.Id_Institution)
+            .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<FOOD_PRODUCT>()
+            .HasOne(n => n.PRODUCT)
+            .WithMany(i => i.FOOD_PRODUCTS)
+            .HasForeignKey(n => n.Id_Product)
+            .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<MENU_FOOD>()
+           .HasOne(n => n.MENU)
+           .WithMany(i => i.MENU_FOODS)
+           .HasForeignKey(n => n.Id_Menu)
+           .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<EVALUATION>()
+          .HasOne(u => u.SHIPMENT)
+          .WithOne(s => s.EVALUATION)
+          .HasForeignKey<EVALUATION>(s => s.Id_Shipment)
+          .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<REQUEST_MENU>()
+           .HasOne(n => n.REQUEST)
+           .WithMany(i => i.REQUEST_MENUS)
+           .HasForeignKey(n => n.Id_Request)
+           .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<REQUEST>()
+            .HasOne(u => u.SHIPMENT)
+            .WithOne(s => s.REQUEST)
+            .HasForeignKey<SHIPMENT>(s => s.Id_Request)
+            .OnDelete(DeleteBehavior.NoAction);
+
+        }
+
         public DbSet<ADMIN_PAE> ADMIN_PAEs { get; set; }
         public DbSet<CATEGORY> CATEGORYS { get; set; }
         public DbSet<EVALUATION> EVALUATIONS { get; set; }
