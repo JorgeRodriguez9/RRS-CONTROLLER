@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace RRS_Controller.Models
 {
@@ -27,7 +28,6 @@ namespace RRS_Controller.Models
         public virtual USER USER { get; set; }
 
         public int Id_Institution { get; set; }
-
         [ForeignKey("Id_Institution")]
         public virtual INSTITUTION INSTITUTION { get; set; }
 
