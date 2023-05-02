@@ -16,7 +16,6 @@ namespace RRS_Controller.Models
         [StringLength(20)]
         public string Password { get; set; }
 
-        
         public int Id_Role { get; set; }
         [ForeignKey("Id_Role")]
         public virtual ROLE ROLE { get; set; }
