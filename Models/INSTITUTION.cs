@@ -12,8 +12,7 @@ namespace RRS_Controller.Models
         [StringLength(20)]
         public string Name { get; set; }
 
-        [StringLength(30)]
-        public string Adress { get; set; }
+        public int Document { get; set; }
 
         public int Phone_Number { get; set; }
 

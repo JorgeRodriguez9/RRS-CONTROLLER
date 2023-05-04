@@ -33,7 +33,7 @@ namespace RRS_Controller
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=AdminPae}/{action=ProductRegister}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }
