@@ -20,3 +20,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.form-control {
+    width: 300px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+}
+
+
+

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRS_Controller.DAL;
 
@@ -11,9 +12,11 @@ using RRS_Controller.DAL;
 namespace RRS_Controller.Migrations
 {
     [DbContext(typeof(RSSCONTROLLERContext))]
-    partial class RSSCONTROLLERContextModelSnapshot : ModelSnapshot
+    [Migration("20230504025500_migracion1")]
+    partial class migracion1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -421,6 +424,11 @@ namespace RRS_Controller.Migrations
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("ID");
 
