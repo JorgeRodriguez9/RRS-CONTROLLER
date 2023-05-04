@@ -12,9 +12,6 @@ namespace RRS_Controller.Models
         [StringLength(30)]
         public string Name { get; set; }
 
-        [StringLength(20)]
-        public string Status { get; set; }
-
         public int Id_Supplier { get; set; }
         [ForeignKey("Id_Supplier")]
         public virtual SUPPLIER SUPPLIER { get; set; }
