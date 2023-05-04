@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RRS_Controller.styles.css" asp-append-version="true" />
+    <style>
+        .form-control {
+            width: 300px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,6 +49,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CreateMenus">Create Menus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="HomeManagerPAE">Home Manager</a>
                         </li>
                     </ul>
                 </div>
