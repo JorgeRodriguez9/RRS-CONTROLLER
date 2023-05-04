@@ -12,8 +12,8 @@ using RRS_Controller.DAL;
 namespace RRS_Controller.Migrations
 {
     [DbContext(typeof(RSSCONTROLLERContext))]
-    [Migration("20230502032104_migracion")]
-    partial class migracion
+    [Migration("20230502035105_Migration1")]
+    partial class Migration1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
