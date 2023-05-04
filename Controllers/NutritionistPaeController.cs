@@ -3,27 +3,47 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RRS_Controller.Controllers
 {
-    public class NutritionistPaeController : Controller
+    public class NutritionistPAEController : Controller
     {
-        // GET: NutritionistPaeController
+
+        public IActionResult NutritionistPAE()
+        {
+            return View();
+        }
+
+        public IActionResult createMenu()
+        {
+            return View();
+        }
+
+        public IActionResult createFood()
+        {
+            return View();
+        }
+        public IActionResult registerMenu()
+        {
+            return View();
+        }
+
+        // GET: NutritionistPAEController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: NutritionistPaeController/Details/5
+        // GET: NutritionistPAEController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: NutritionistPaeController/Create
+        // GET: NutritionistPAEController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: NutritionistPaeController/Create
+        // POST: NutritionistPAEController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -38,13 +58,13 @@ namespace RRS_Controller.Controllers
             }
         }
 
-        // GET: NutritionistPaeController/Edit/5
+        // GET: NutritionistPAEController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: NutritionistPaeController/Edit/5
+        // POST: NutritionistPAEController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -59,13 +79,13 @@ namespace RRS_Controller.Controllers
             }
         }
 
-        // GET: NutritionistPaeController/Delete/5
+        // GET: NutritionistPAEController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: NutritionistPaeController/Delete/5
+        // POST: NutritionistPAEController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

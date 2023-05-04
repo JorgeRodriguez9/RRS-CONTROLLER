@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Jorge Andrés/U. Cundinamarca/5. Quinto Semestre/Materias/Ingeniería de Software 1/Proyecto/Visual Studio/Views/nutritionistPAE/createMenu.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbnV0cml0aW9uaXN0UEFFXGNyZWF0ZU1lbnUuY3NodG1s
+[C:/Jorge Andrés/U. Cundinamarca/5. Quinto Semestre/Materias/Ingeniería de Software 1/Proyecto/Visual Studio/Views/nutritionistPAE/CreateFood.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbnV0cml0aW9uaXN0UEFFXENyZWF0ZUZvb2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Jorge Andrés/U. Cundinamarca/5. Quinto Semestre/Materias/Ingeniería de Software 1/Proyecto/Visual Studio/Views/nutritionistPAE/CreateMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbnV0cml0aW9uaXN0UEFFXENyZWF0ZU1lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Jorge Andrés/U. Cundinamarca/5. Quinto Semestre/Materias/Ingeniería de Software 1/Proyecto/Visual Studio/Views/nutritionistPAE/HomeNutritionistPae.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbnV0cml0aW9uaXN0UEFFXEhvbWVOdXRyaXRpb25pc3RQYWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Jorge Andrés/U. Cundinamarca/5. Quinto Semestre/Materias/Ingeniería de Software 1/Proyecto/Visual Studio/Views/Shared/Error.cshtml]
