@@ -1,9 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using RRS_Controller.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace RRS_Controller.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -11,6 +15,12 @@ namespace RRS_Controller.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+        }
+
+        public async Task<IActionResult> Exit()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Account");
         }
 
         public IActionResult Index()

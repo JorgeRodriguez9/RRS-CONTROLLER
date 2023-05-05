@@ -8,6 +8,7 @@ namespace RRS_Controller.DAL
     public class RSSCONTROLLERContext : DbContext
     {
 
+
         public RSSCONTROLLERContext(DbContextOptions<RSSCONTROLLERContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

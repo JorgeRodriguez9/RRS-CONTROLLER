@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using RRS_Controller.DAL;
 
@@ -16,6 +17,11 @@ namespace RRS_Controller
             builder.Services.AddDbContext<RSSCONTROLLERContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option =>
+            {
+                option.LoginPath = "/Account/Login";
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,7 +36,7 @@ namespace RRS_Controller
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
